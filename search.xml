@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[百度编辑器 Ueditor 上传图片时打开文件夹的延迟问题，点击上传图片弹窗打开慢问题]]></title>
+      <url>%2F2017%2F05%2F08%2F%E7%99%BE%E5%BA%A6%E7%BC%96%E8%BE%91%E5%99%A8-Ueditor-%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%97%B6%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%EF%BC%8C%E7%82%B9%E5%87%BB%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%BC%B9%E7%AA%97%E6%89%93%E5%BC%80%E6%85%A2%E9%97%AE%E9%A2%98%2F</url>
+      <content type="text"><![CDATA[在使用 ueditor 开发时， 作为一个web文本编辑器使用时。 当点击上传图片时， 文件夹要延迟好久才能打开。 解决： 针对多图片上传， 将/ueditor/dialogs/image/image.js 文件下的以下代码 12345accept: &#123; title: &apos;Images&apos;, extensions: acceptExtensions, mimeTypes: &apos;image/*&apos;&#125;, 改为： 12345accept: &#123; title: &apos;Images&apos;, extensions: acceptExtensions, mimeTypes: &apos;image/gif,image/jpeg,image/png,image/jpg,image/bmp&apos;&#125;, 当然 可接受的格式可以根据需要修改，如果不希望上传gif 则改为 accept=”image/jpeg,image/png,image/jpg,image/bmp”]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[ueditor1.4.3 php七牛存储版更新支持图片、视频、附件上传管理]]></title>
+      <url>%2F2017%2F05%2F07%2Fueditor1-4-3-php%E4%B8%83%E7%89%9B%E5%AD%98%E5%82%A8%E7%89%88%E6%9B%B4%E6%96%B0%E6%94%AF%E6%8C%81%E5%9B%BE%E7%89%87%E3%80%81%E8%A7%86%E9%A2%91%E3%80%81%E9%99%84%E4%BB%B6%E4%B8%8A%E4%BC%A0%E7%AE%A1%E7%90%86%2F</url>
+      <content type="text"><![CDATA[qiniuueditor1.4.3 ###配置 ./php/conf.php 123456789101112131415//配置$QINIU_ACCESS_KEY和$QINIU_SECRET_KEY 为你自己的key$QINIU_ACCESS_KEY = &apos;your akey&apos;;$QINIU_SECRET_KEY = &apos;your skey&apos;;//配置bucket为你的bucket$BUCKET = &quot;your bucket&quot;;//配置你的域名访问地址$HOST = &quot;your qiniu domain&quot;;//上传超时时间$TIMEOUT = &quot;3600&quot;;//保存规则$SAVETYPE = &quot;date&quot;; //现在支持unix时间戳，unix时间戳写date,如果文件名上传就留空 ./php/config.json &quot;imageSaveType&quot; : &quot;date&quot;, 默认date为unix时间戳，留空则文件名方式上传 ###水印 ./php/conf.php 1234567891011121314151617181920212223242526//开启水印,不开启为false$USEWATER = true;//水印图片的七牛地址$WATERIMAGEURL = &quot;http://gitwiduu.u.qiniudn.com/ueditor-bg.png&quot;; //七牛上的图片地址//水印透明度$DISSOLVE = 50;//水印位置$GRAVITY = &quot;SouthEast&quot;;//边距横向位置$DX = 10;//边距纵向位置$DY = 10;//水印具体位置分布如下NorthWest | North | NorthEast | | | | --------------+----------------+-------------- | | West | Center | East | | --------------+----------------+-------------- | | | | SouthWest | South | SouthEast 然后就可以了! ###上传演示 ###图片在线管理 Coding地址：https://coding.net/u/widuu/p/qiniu_ueditor_1.4.3/git Github地址：https://github.com/widuu/qiniu_ueditor_1.4.3 ###博客支持技术支持http://www.widuu.com转载自微度网络，本文标题：《ueditor1.4.3 php七牛存储版更新支持图片、视频、附件上传管理》]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[memcached的安装]]></title>
+      <url>%2F2017%2F04%2F20%2Fmemcached%E7%9A%84%E5%AE%89%E8%A3%85%2F</url>
+      <content type="text"><![CDATA[memcached 扩展安装方法。 http://pecl.php.net 这是一个PHP扩展的存储库，提供了所有已知扩展名和目录，用于下载和开发PHP扩展。 以下用的是brew的安装，下载地址：Homebrew 1.通过 brew 查找memcached是否可以存在； brew search memcached 2.安装 memcached 前，要先安装依赖项 libmemcached； brew install libmemcached 3.安装 memcached； 1234567php -m 查看目录[PHP Modules]php -i | grep php.ini 查找php.inivi /usr/local/etc/php/7.0/php.ini 编辑PHP配置文件extension=memcached.so 在文件中添加一条 4.通过 http://pecl.php.net 查找memcached下载；5.离成功还剩最后一步了，打开下载好的文件，进行如下操作就能实现编译安装。 12345678910111213cd memcached-3.0.3phpize 一种构建工具，为PHP扩展准备构建环境。./configure 对即将安装的软件进行配置，检查当前的环境是否满足要安装软件的依赖关系brew install pkg-config 提示错误缺少文件 安装缺损文件./configure 检测系统配置，生成makefile文件,以便你可以用make和make install来编译和安装程序。make &amp;&amp; make install 编译,安装php70-fpm stop php70-fpm start 重启php-fqm]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hexo更换主题 (此篇以安装NexT为例)]]></title>
+      <url>%2F2017%2F04%2F04%2FHexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98-%E6%AD%A4%E7%AF%87%E4%BB%A5%E5%AE%89%E8%A3%85NexT%E4%B8%BA%E4%BE%8B%2F</url>
+      <content type="text"><![CDATA[进入到主题文件目录1cd themes 默认主题 landscape 目录结构: themes目录结构 clone hexo-theme-next 并改名为 next1git clone https://github.com/iissnan/hexo-theme-next.git next 当然你也可以clone 自己喜欢的Hexo主题Git地址,只需要将主题文件复制到themes这个文件内就可以了: 1git clone theme_url.git 打开Hexo根目录下的 _config.yml 站点配置文件（tips:注意空格!）,将 theme 的 landscape 修改为刚才 clone 的 next1234# Extensions## Plugins: https://hexo.io/plugins/## Themes: https://hexo.io/themes/theme: next 同时设置一下站点的语言、时区，其他的配置可根据自己喜好更改： 12language: zh-Hanstimezone: Asia/Urumqi 执行一下 hexo clear 清除缓存。 验证主题是否存在异常问题1hexo s --debug 会提示如下信息，访问 http://localhost:4000/ : 1INFO Hexo is running at http://localhost:4000/. Press Ctrl+C to stop 主题具体配置通过更改 themes/next/_config.yml 文件对next主题进行具体的配置： 12345678910111213# next主题可通过修改Scheme选项获得3中不同的外观，默认使用的是Muse：scheme: Mist# 添加个人头像：avatar: http://avatar.url# 菜单栏menu配置，根据自己喜好开启注释:menu: home: / categories: /categories about: /about archives: /archives tags: /tags #sitemap: /sitemap.xml commonweal: /404.html 玩法很多并集成了常用的第三方服务，可以参考Next主题官网 Enjoy it ! 备注：来自于 SurprisePeas - 个人技术博客 的分享]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Github+Hexo+Markdown写博客]]></title>
+      <url>%2F2017%2F04%2F04%2FGithub-Hexo-Markdown%E5%86%99%E5%8D%9A%E5%AE%A2%2F</url>
+      <content type="text"><![CDATA[『Markdown 写博客』是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。 原理直接采用Markdown格式书写文章，然后通过脚本引擎，将Markdown解析为对应的html静态文件，加上一些润色CSS以及JavaScript，于是网页生成了。 HexoHexo 是由台湾个人团队基于 Node JS 开发的一个快速、简洁且高效的博客框架。完全开源，源代码托管在 Github 上。安装后，通过其简单的命令就可以在本地快速的搭建起一个个人博客。官网上提供的文档全面且易阅读，非常容易上手。 环境准备 NodeJS安装 访问官网进行安装 nodejs.org hexo 安装 1$ npm install hexo-cli -g # 安装 hexo 注意 由于 node 的包管理工具npm默认采用的源在国内访问受限，因此，这里安装可能会卡壳或者报错。不幸中的万幸淘宝做了npm国内镜像，因此只需将npm的源换成淘宝npm镜像，问题可轻松解决。 安装过程有任何因为，可参考官方文档 搭建本地静态博客1234$ hexo init &quot;My blog&quot; # 初始化项目，“My blog”为自定义项目名$ cd &quot;My blog&quot;$ npm install # 安装依赖$ hexo server # 生成静态文件, 启动本地web服务器 写作博客 新建一篇博客 $ hexo new &quot;Article Name&quot; 写作 以Markdown格式写作 生成静态HTML文件 $ hexo generate 运行博客，查看效果 $ hexo server 部署到远程站点 – Github个人主页 1.添加git作为Hexo远程部署的方式，并添加github仓库地址，作为部署的站点地址 编辑_config.yml文件，添加如下信息 123456# Deployment## Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: https://github.com/$username/$username.github.io.git branch: master 2.添加Git部署所依赖的库 hexo-deployer-git 1$ npm install hexo-deployer-git --save 3.添加.gitignore文件，忽略不必要的文件 1234567.DS_StoreThumbs.dbdb.json*.lognode_modules/public/.deploy*/ 4.初始化仓库，并添加github远程源 12345$ cd &quot;My blog&quot;$ git init$ git add .$ git commit -m &quot;init blog&quot; # 提交$ git remote add origin https://github.com/$username/$username.github.io.git # 添加远程源 关于如何建立github个人主页版本库，看参见上一篇博客 Github创建个人主页 5.部署到Github上 1$ hexo deploy 至此，已经将博客部署到github个人主页上了，可以通过浏览器查看效果 http://$username.github.io 备注：来自于 Victor - 个人技术博客 的分享]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Github创建个人主页]]></title>
+      <url>%2F2017%2F04%2F03%2FGithub%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%2F</url>
+      <content type="text"><![CDATA[创建GitHub Pages 前些天，自己刚刚接触hexo，并用hexo搭建了自己的博客，对hexo的强大搭建博客能力感到赞叹。用我的实际体验来说，你只要是有点计算机基础的人，完全可以轻松的使用hexo搭建起自己的博客。你要是用过github、oschina其中的一样，那对你来说，就可以分分钟上手了。如你所见，本博客由于刚刚起步，博文少的可怜，因此写这篇博文也可以充场子，免得太冷清。算是自己的个人笔记吧，我本人对于刚学的东西都喜欢用博文记录，免得以后自己忘掉。 新建一个GitHub的仓库,GitHub 为每一个用户分配了一个二级域名 $username.github.io，用户为自己的二级域名创建主页很容易，只要在个人托管空间下创建一个名为 $username.github.io的版本库，向其master分支提交网站静态页面即可，其中网站首页为index.html。 1.创建个人主页版本库2.克隆版本库到本地 12$ git clone git@github.com:username/username.github.io.git$ cd username.github.io/ 3.在版本库根目录中创建文件index.html作为首页。 12345678&lt;html&gt; &lt;head&gt; &lt;title&gt;hello&lt;/title&gt;&lt;/head&gt;&lt;body&gt; &lt;h1&gt;Hello world!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt; 4.提交并推送到远程Github上。 123$ git add index.html$ git commit -m &quot;Homepage init.&quot;$ git push origin master 5.至此，个人主页已经生成，访问网址查看结果： http://username.github.io/ 备注：来自于 Victor - 个人技术博客 的分享]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>%2F2017%2F03%2F24%2Fhello-world%2F</url>
+      <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    </entry>
+
+    
+  
+  
+</search>
