@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[淘宝弹性布局方案lib-flexible实践]]></title>
+      <url>%2F2017%2F06%2F03%2F%E6%B7%98%E5%AE%9D%E5%BC%B9%E6%80%A7%E5%B8%83%E5%B1%80%E6%96%B9%E6%A1%88lib-flexible%E5%AE%9E%E8%B7%B5%2F</url>
+      <content type="text"><![CDATA[#lib.flexible 移动端自适应方案，相关文章请参考此处]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[百度编辑器 Ueditor 上传图片时打开文件夹的延迟问题，点击上传图片弹窗打开慢问题]]></title>
       <url>%2F2017%2F05%2F08%2F%E7%99%BE%E5%BA%A6%E7%BC%96%E8%BE%91%E5%99%A8-Ueditor-%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E6%97%B6%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E5%BB%B6%E8%BF%9F%E9%97%AE%E9%A2%98%EF%BC%8C%E7%82%B9%E5%87%BB%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E5%BC%B9%E7%AA%97%E6%89%93%E5%BC%80%E6%85%A2%E9%97%AE%E9%A2%98%2F</url>
       <content type="text"><![CDATA[在使用 ueditor 开发时， 作为一个web文本编辑器使用时。 当点击上传图片时， 文件夹要延迟好久才能打开。 解决： 针对多图片上传， 将/ueditor/dialogs/image/image.js 文件下的以下代码 12345accept: &#123; title: &apos;Images&apos;, extensions: acceptExtensions, mimeTypes: &apos;image/*&apos;&#125;, 改为： 12345accept: &#123; title: &apos;Images&apos;, extensions: acceptExtensions, mimeTypes: &apos;image/gif,image/jpeg,image/png,image/jpg,image/bmp&apos;&#125;, 当然 可接受的格式可以根据需要修改，如果不希望上传gif 则改为 accept=”image/jpeg,image/png,image/jpg,image/bmp”]]></content>
@@ -20,6 +27,13 @@
       <title><![CDATA[memcached的安装]]></title>
       <url>%2F2017%2F04%2F20%2Fmemcached%E7%9A%84%E5%AE%89%E8%A3%85%2F</url>
       <content type="text"><![CDATA[memcached 扩展安装方法。 http://pecl.php.net 这是一个PHP扩展的存储库，提供了所有已知扩展名和目录，用于下载和开发PHP扩展。 以下用的是brew的安装，下载地址：Homebrew 1.通过 brew 查找memcached是否可以存在； brew search memcached 2.安装 memcached 前，要先安装依赖项 libmemcached； brew install libmemcached 3.安装 memcached； 1234567php -m 查看目录[PHP Modules]php -i | grep php.ini 查找php.inivi /usr/local/etc/php/7.0/php.ini 编辑PHP配置文件extension=memcached.so 在文件中添加一条 4.通过 http://pecl.php.net 查找memcached下载；5.离成功还剩最后一步了，打开下载好的文件，进行如下操作就能实现编译安装。 12345678910111213cd memcached-3.0.3phpize 一种构建工具，为PHP扩展准备构建环境。./configure 对即将安装的软件进行配置，检查当前的环境是否满足要安装软件的依赖关系brew install pkg-config 提示错误缺少文件 安装缺损文件./configure 检测系统配置，生成makefile文件,以便你可以用make和make install来编译和安装程序。make &amp;&amp; make install 编译,安装php70-fpm stop php70-fpm start 重启php-fqm]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jquery开发自定义的插件总结]]></title>
+      <url>%2F2017%2F04%2F15%2Fjquery%E5%BC%80%E5%8F%91%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E6%8F%92%E4%BB%B6%E6%80%BB%E7%BB%93%2F</url>
+      <content type="text"><![CDATA[jquery开发自定义的控件分两大类，第一就是不带参数的插件，还有一类就是带参数的jquery插件了。 无参的格式为： 12345678(function($)&#123; $.fn.extend(&#123; myPlugName:function()&#123;&lt;!--myPlugName你的插件的名字，根据自己的情况来命名--&gt; //dosomethings &#125;); &#125; &#125;); &#125;)(jQuery); 例子： 1234567891011121314151617&lt;script type=&quot;text/javascript&quot;&gt;(function($)&#123; $.fn.extend(&#123; myPlugName:function()&#123; $(this).click(function()&#123; alert($(this).val()); &#125;); &#125; &#125;); &#125;)(jQuery);&lt;/script&gt; &lt;body&gt; &lt;input type=&quot;button&quot; value=&quot;点击我&quot; id=&quot;btn&quot; /&gt;&lt;/body&gt;&lt;script type=&quot;text/javascript&quot;&gt; $(&quot;#btn&quot;).myPlugName();&lt;/script&gt; 带参数的jquery插件 12345678910(function($)&#123; $.fn.hilight=function(options)&#123; var defaults=&#123; foreground:&apos;red&apos;, background:&apos;yellow&apos; &#125;; var opts = $.extend(defaults,options); //dosomethings &#125;;&#125;)(jQuery); 例子： 12345678910111213141516171819&lt;script type=&quot;text/javascript&quot;&gt; (function($)&#123; $.fn.hilight=function(options)&#123; var defaults=&#123; foreground:&apos;red&apos;, background:&apos;yellow&apos; &#125;; var opts = $.extend(defaults,options); $(this).css(&quot;background-color&quot;,opts.background); $(this).css(&quot;color&quot;,opts.foreground); &#125;; &#125;)(jQuery);&lt;/script&gt;&lt;body&gt; &lt;div id=&quot;myDiv&quot;&gt;This is a Params JQuery!&lt;/div&gt;&lt;/body&gt;&lt;script type=&quot;text/javascript&quot;&gt; $(&quot;#myDiv&quot;).hilight(&#123;foreground:&apos;blue&apos;&#125;);&lt;/script&gt;]]></content>
     </entry>
 
     
