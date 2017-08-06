@@ -1,0 +1,888 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="前端," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="正则表达式-1234567891011用户名：2-30个字符，支持中文、数字、字母、“_”、减号。/^([\u4e00-\u9fa5]|[0-9a-zA-Z_-])&amp;#123;2,30&amp;#125;$/密码：6-12位字母和数字组合/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]&amp;#123;6,12&amp;#125;$/;邮箱：/^\w[-\w.+]*@([A-Za-z0-9]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端知识备忘">
+<meta property="og:url" content="http://yoursite.com/2017/07/16/前端知识备忘/index.html">
+<meta property="og:site_name" content="Xiao丶メ北er╮">
+<meta property="og:description" content="正则表达式-1234567891011用户名：2-30个字符，支持中文、数字、字母、“_”、减号。/^([\u4e00-\u9fa5]|[0-9a-zA-Z_-])&amp;#123;2,30&amp;#125;$/密码：6-12位字母和数字组合/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]&amp;#123;6,12&amp;#125;$/;邮箱：/^\w[-\w.+]*@([A-Za-z0-9]">
+<meta property="og:updated_time" content="2017-08-06T10:34:11.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端知识备忘">
+<meta name="twitter:description" content="正则表达式-1234567891011用户名：2-30个字符，支持中文、数字、字母、“_”、减号。/^([\u4e00-\u9fa5]|[0-9a-zA-Z_-])&amp;#123;2,30&amp;#125;$/密码：6-12位字母和数字组合/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]&amp;#123;6,12&amp;#125;$/;邮箱：/^\w[-\w.+]*@([A-Za-z0-9]">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/16/前端知识备忘/"/>
+
+
+
+
+
+  <title> 前端知识备忘 | Xiao丶メ北er╮ </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xiao丶メ北er╮</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/16/前端知识备忘/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiaobei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiao丶メ北er╮">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                前端知识备忘
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-16T13:13:17+08:00">
+                2017-07-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p>-<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">用户名：2-30个字符，支持中文、数字、字母、“_”、减号。</div><div class="line">/^([\u4e00-\u9fa5]|[0-9a-zA-Z_-])&#123;2,30&#125;$/</div><div class="line"></div><div class="line">密码：6-12位字母和数字组合</div><div class="line">/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]&#123;6,12&#125;$/;</div><div class="line"></div><div class="line">邮箱：</div><div class="line">/^\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]&#123;2,14&#125;$/;</div><div class="line"></div><div class="line">手机：</div><div class="line">/^1\d&#123;10&#125;$/;</div></pre></td></tr></table></figure></p>
+<h1 id="H5微场景"><a href="#H5微场景" class="headerlink" title="H5微场景"></a>H5微场景</h1><ul>
+<li><a href="http://www.eqxiu.com/" target="_blank" rel="external">企业秀</a></li>
+<li><a href="http://maka.im/" target="_blank" rel="external">mamk</a></li>
+</ul>
+<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">readonly 表示此域的值不可修改，仅可与 type=&quot;text&quot; 配合使用，可复制，可选择,可以接收焦点，后台会接收到传值. </div><div class="line">&lt;input type=&quot;text&quot; readonly=&quot;readonly&quot; /&gt;</div></pre></td></tr></table></figure>
+<p>#JavaScript<br>-</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">CommonJS，AMD，CMD区别</div><div class="line"></div><div class="line">CommonJS</div><div class="line">CommonJs 是服务器端模块的规范，Node.js采用了这个规范。 </div><div class="line"></div><div class="line">根据CommonJS规范，一个单独的文件就是一个模块。加载模块使用require方法，该方法读取一个文件并执行，最后返回文件内部的exports对象。</div><div class="line"></div><div class="line">AMD((Asynchromous Module Definition) </div><div class="line"></div><div class="line">AMD 是 RequireJS 在推广过程中对模块定义的规范化产出 </div><div class="line"></div><div class="line">AMD异步加载模块。它的模块支持对象 函数 构造器 字符串 JSON等各种类型的模块。 </div><div class="line"></div><div class="line">CMD </div><div class="line"></div><div class="line">CMD是SeaJS 在推广过程中对模块定义的规范化产出 </div><div class="line"></div><div class="line">CMD和AMD的区别有以下几点： </div><div class="line"></div><div class="line">1.对于依赖的模块AMD是提前执行，CMD是延迟执行。不过RequireJS从2.0开始，也改成可以延迟执行（根据写法不同，处理方式不通过）。</div></pre></td></tr></table></figure>
+<h1 id="循环对象"><a href="#循环对象" class="headerlink" title="循环对象"></a>循环对象</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var man =&#123;hands:2,legs:2,heads:1&#125;;</div><div class="line">for(var i in man)&#123;</div><div class="line">     console.log(i,&quot;:&quot;,man[i]);</div><div class="line">&#125;</div><div class="line">//输出结果为</div><div class="line">hands : 2</div><div class="line">legs : 2</div><div class="line">heads : 1</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">窗口弹框(&apos;提示信息&apos;,值);</div><div class="line">window.prompt(&quot;Copy to clipboard: Ctrl+C, Enter&quot;, data.id);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">JSON.parse</div><div class="line">parse用于从一个字符串中解析出json对象,如</div><div class="line">var str = &apos;&#123;&quot;name&quot;:&quot;huangxiaojian&quot;,&quot;age&quot;:&quot;23&quot;&#125;&apos;</div><div class="line"></div><div class="line">结果：</div><div class="line"></div><div class="line">JSON.parse(str)</div><div class="line"></div><div class="line">Object</div><div class="line"></div><div class="line">age: &quot;23&quot;</div><div class="line">name: &quot;huangxiaojian&quot;</div><div class="line">__proto__: Object</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">window.open 弹框显示</div><div class="line"></div><div class="line"> $(&apos;.look-btn&apos;).click(function () &#123;</div><div class="line">    var innerWidth = window.innerWidth / 2 - 200;</div><div class="line">    var innerHeight = window.innerHeight / 2 - 300;</div><div class="line"></div><div class="line">    window.open(&apos;/document/article/detail/&apos; + params.id, &apos;&apos;, &apos;width=400,height=600,top=&apos; + innerHeight + &apos;,left=&apos; + innerWidth);</div></pre></td></tr></table></figure>
+<p>filter() 过滤函数</p>
+<p>$(‘li’).filter(‘:even’).css(‘background-color’, ‘red’);<br>将项目 1, 3, 5 的背景设置为红色<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">下标0开始</div></pre></td></tr></table></figure></p>
+<p>slice() 把匹配元素集合缩减为指定的指数范围的子集。</p>
+<ul><br>  <li>list item 1</li><br>  <li>list item 2</li><br>  <li>list item 3</li><br>  <li>list item 4</li><br>  <li>list item 5</li><br></ul>
+
+<script>
+$('li').slice(-1).css('background-color', 'red');
+</script>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+
+# toFixed
+四舍五入取两位小数点
+var loaded = e.delegatedEvent['loaded'];
+var total = e.delegatedEvent['total'];
+
+$('.progress-bar').html((Number(loaded / total * 100)).toFixed(2) + '%');
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+
+substr() 方法可在字符串中抽取从 start 下标开始的指定数目的字符。
+<script type="text/javascript">
+
+var str="Hello world!"
+document.write(str.substr(3,7))
+
+</script> 
+
+<p>lo worl<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">split() 方法用于把一个字符串分割成字符串数组。</div><div class="line">document.write(str.split(&quot; &quot;,3))</div><div class="line"></div><div class="line">reverse() 方法用于颠倒数组中元素的顺序。</div><div class="line"></div><div class="line">join() 方法用于把数组中的所有元素放入一个字符串。   </div><div class="line">document.write(arr.join())    `George,John,Thomas</div><div class="line"></div><div class="line">-----------------------------------------</div><div class="line"></div><div class="line">数组的操作</div></pre></td></tr></table></figure></p>
+<p>concat() 数组合并</p>
+<script type="text/javascript">
+
+var arr = new Array(3)
+arr[0] = "George"
+arr[1] = "John"
+arr[2] = "Thomas"
+
+var arr2 = new Array(3)
+arr2[0] = "James"
+arr2[1] = "Adrew"
+arr2[2] = "Martin"
+
+document.write(arr.concat(arr2))
+输出值：George,John,Thomas,James,Adrew,Martin
+
+</script>
+
+
+<hr>
+<p>sort() 数组排序</p>
+<script type="text/javascript">
+
+function sortNumber(a, b)
+{
+return a - b
+}
+
+var arr = new Array(6)
+arr[0] = "10"
+arr[1] = "5"
+arr[2] = "40"
+arr[3] = "25"
+arr[4] = "1000"
+arr[5] = "1"
+
+document.write(arr + "<br />")
+document.write(arr.sort(sortNumber))
+
+</script>
+输出值：1,5,10,25,40,1000
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+
+Math（算数）对象
+round() 对一个数进行四舍五入。
+document.write(Math.round(4.7))   `5
+
+Math 对象的 random() 方法来返回一个介于 0 和 1 之间的随机数：
+document.write(Math.random())        `0.9370844220218102
+
+Math 对象的 floor() 方法和 random() 来返回一个介于 0 和 10 之间的随机数：
+document.write(Math.floor(Math.random()*(10-0)+1)+0)   `3
+
+注意：
+1. 从1开始 至 任意值parseInt(Math.random()*上限+1);
+2. 从任意值开始 至 任意值parseInt(Math.random()*(上限-下限+1)+下限);
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># 组件格式</div></pre></td></tr></table></figure>
+
+无参的格式为：
+(function($){
+     $.fn.extend({
+         myPlugName:function(){<!--myPlugName你的插件的名字，根据自己的情况来命名-->
+             //dosomethings
+         });    
+     }
+     });    
+})(jQuery);
+
+例子：
+<script type="text/javascript">
+(function($){
+    $.fn.extend({
+        myPlugName:function(){
+            $(this).click(function(){
+                alert($(this).val());    
+            });    
+        }
+    });    
+})(jQuery);
+</script>       
+<body>
+    <input type="button" value="点击我" id="btn">
+</body>
+<script type="text/javascript">
+      $("#btn").myPlugName();
+</script>
+
+<p>带参数的jquery插件<br>(function($){<br>    $.fn.hilight=function(options){<br>        var defaults={<br>            foreground:’red’,<br>            background:’yellow’<br>        };<br>        var opts = $.extend(defaults,options);<br>        //dosomethings<br>    };<br>})(jQuery);</p>
+<p>例子：</p>
+<p><script type="text/javascript"><br>    (function($){<br>        $.fn.hilight=function(options){<br>            var defaults={<br>                foreground:’red’,<br>                background:’yellow’<br>            };<br>            var opts = $.extend(defaults,options);<br>            $(this).css(“background-color”,opts.background);<br>            $(this).css(“color”,opts.foreground);<br>        };<br>    })(jQuery);<br></script></p>
+<p><body><br>    <div id="myDiv">This is a Params JQuery!</div><br></body></p>
+<p><script type="text/javascript"><br>    $(“#myDiv”).hilight({foreground:’blue’});<br></script><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>只能输入数字，用正则判断<br>$(document).on(‘keyup’, ‘input[name=”provider_project_products[num][]”]’, function () {<br>    var pattern = /\D/g;<br>    var str = $(this).val();<br>    var date = str.replace(pattern, ‘’);<br>    $(this).val(date);<br>});<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"># 手机触摸判断方向</div></pre></td></tr></table></figure></p>
+<p>var startX, startY, moveEndX, moveEndY, X, Y;</p>
+<p>$(“body”).on(“touchstart”, function (e) {<br>    // 判断默认行为是否可以被禁用<br>    if (e.cancelable) {<br>        // 判断默认行为是否已经被禁用<br>        if (!e.defaultPrevented) {<br>            e.preventDefault();<br>        }<br>    }<br>    startX = e.touches[0].pageX;<br>    startY = e.touches[0].pageY;</p>
+<p>});<br>$(“body”).on(“touchend”, function (e) {<br>    // 判断默认行为是否可以被禁用<br>    if (e.cancelable) {<br>        // 判断默认行为是否已经被禁用<br>        if (!e.defaultPrevented) {<br>            e.preventDefault();<br>        }<br>    }<br>    moveEndX = e.changedTouches[0].pageX;<br>    moveEndY = e.changedTouches[0].pageY;<br>        X = moveEndX - startX,<br>        Y = moveEndY - startY;<br>    //左滑<br>    if (X &gt; 0) {<br>        alert(‘右滑’);<br>    }<br>    //右滑<br>    else if (X &lt; 0) {<br>         alert(‘左滑’);<br>    }<br>    //下滑<br>    else if (Y &gt; 0) {<br>         alert(‘下滑’);<br>    }<br>    //上滑<br>    else if (Y &lt; 0) {<br>         alert(‘上滑’);<br>    }<br>    //单击<br>    else {<br>         alert(‘单击’);<br>    }<br>});<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"># css</div><div class="line">- [前端开发面试题](https://juejin.im/entry/5781b8db0a2b58005765e628)</div><div class="line">-</div></pre></td></tr></table></figure></p>
+<p>不兼容IE8以下<br>图片定义，可以居中<br>position: absolute;<br>top: 50%;<br>left: 50%;<br>-webkit-transform: translate(-50%,-50%);<br>-moz-transform: translate(-50%,-50%);<br>transform: translate(-50%,-50%);</p>
+<p>兼容IE8<br>position: absolute;<br>top: 0;<br>right: 0;<br>bottom: 0;<br>left: 0;<br>margin: auto;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>css3 列表排列<br>display: flex;<br>flex-wrap: wrap;<br>justify-content: space-between;</p>
+<p>显示省略号<br>overflow: hidden;<br>text-overflow:ellipsis;<br>white-space: nowrap;</p>
+<p>多行文本溢出显示省略号<br>display: -webkit-box;<br>-webkit-box-orient: vertical;<br>-webkit-line-clamp: 3;<br>overflow: hidden;</p>
+<p>自动转行、换行<br>word-wrap:break-word<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<ul>
+<li>Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示,</li>
+<li><p>可通过加入 CSS 属性 -webkit-text-size-adjust: none; 解决。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+</li>
+<li><p>三角形的绘制<br>#demo {<br>width: 0;<br>height: 0;<br>border-width: 20px;<br>border-style: solid;<br>border-color: transparent transparent red transparent;<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- CSS3新增伪类有那些？</div></pre></td></tr></table></figure>
+<p>举例：<br>  p:first-of-type 选择属于其父元素的首个<br>元素的每个 </p>
+<p>元素。<br>  p:last-of-type  选择属于其父元素的最后 </p>
+<p>元素的每个 </p>
+<p>元素。<br>  p:only-of-type  选择属于其父元素唯一的 </p>
+<p>元素的每个 </p>
+<p>元素。<br>  p:only-child        选择属于其父元素的唯一子元素的每个 </p>
+<p>元素。<br>  p:nth-child(2)  选择属于其父元素的第二个子元素的每个 </p>
+<p>元素。</p>
+<p>  :after          在元素之前添加内容,也可以用来做清除浮动。<br>  :before         在元素之后添加内容<br>  :enabled<br>  :disabled       控制表单控件的禁用状态。<br>  :checked        单选框或复选框被选中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- 初始化CSS样式</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>淘宝的样式初始化代码：<br>body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }<br>body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }<br>h1, h2, h3, h4, h5, h6{ font-size:100%; }<br>address, cite, dfn, em, var { font-style:normal; }<br>code, kbd, pre, samp { font-family:couriernew, courier, monospace; }<br>small{ font-size:12px; }<br>ul, ol { list-style:none; }<br>a { text-decoration:none; }<br>a:hover { text-decoration:underline; }<br>sup { vertical-align:text-top; }<br>sub{ vertical-align:text-bottom; }<br>legend { color:#000; }<br>fieldset, img { border:0; }<br>button, input, select, textarea { font-size:100%; }<br>table { border-collapse:collapse; border-spacing:0; }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- 清除浮动</div></pre></td></tr></table></figure></p>
+<p>.clearfix:after {content:”\200B”; display:block; height:0; clear:both; }<br>.clearfix { *zoom:1; }.  //是在处理兼容性问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- 去掉chrome记住密码后自动填充表单的黄色背景</div></pre></td></tr></table></figure></p>
+<p>情景一：input文本框是纯色背景的<br>可以对input:-webkit-autofill使用足够大的纯色内阴影来覆盖input输入框的黄色背景；如：<br>input:-webkit-autofill {<br>-webkit-box-shadow: 0 0 0px 1000px white inset;<br>border: 1px solid #CCC!important;</p>
+<p>如果你有使用圆角等属性，或者发现输入框的长度高度不太对，可以对其进行调整，除了chrome默认定义的background-color，background-image，color不能用!important提升其优先级以外，其他的属性均可使用!important提升其优先级，如：<br>input:-webkit-autofill {<br>    -webkit-box-shadow: 0 0 0px 1000px white inset;<br>    border: 1px solid #CCC!important;<br>    height: 27px!important;<br>    line-height: 27px!important;<br>    border-radius: 0 4px 4px 0;<br>    }<br>}<br>情景二：input文本框是使用图片背景的<br>1、如果你的图片背景不太复杂，只有一些简单的内阴影，那个人觉得完全可以使用上面介绍的方法用足够大的纯色内阴影去覆盖掉黄色背景，此时只不过是没有了原来的内阴影效果罢了。</p>
+<p>2、如果你实在想留住原来的内阴影效果，那就只能牺牲chrome自动填充表单的功能，使用js去实现，例如：</p>
+<p>$(function() {<br>if (navigator.userAgent.toLowerCase().indexOf(“chrome”) &gt;= 0) {<br>    $(window).load(function(){<br>        $(‘ul input:not(input[type=submit])’).each(function(){<br>            var outHtml = this.outerHTML;<br>            $(this).append(outHtml);<br>            });<br>        });<br>    }<br>});<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- ::before 和 :after中双冒号和单冒号 有什么区别？解释一下这2个伪元素的作用</div></pre></td></tr></table></figure></p>
+<p>伪元素由双冒号和伪元素名称组成.对于CSS2之前已有的伪元素，<br>不过浏览器需要同时支持旧的已经存在的伪元素写法，比如:first-line、:first-letter、:before、:after等，而新的在CSS3中引入的伪元素则不允许再支持旧的单冒号的写法。<br>比如:before，单冒号和双冒号的写法::before作用是一样的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- 怎么让Chrome支持小于12px 的文字？</div></pre></td></tr></table></figure></p>
+<p>body,p{ margin:0; padding:0} p{font-size:10px;} span{-webkit-transform:scale(0.8); display:inline-block}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">- 让页面里的字体变清晰，变细用CSS怎么做？（-webkit-font-smoothing: antialiased;）</div><div class="line"></div><div class="line">- font-style属性可以让它赋值为“oblique” oblique是什么意思？</div></pre></td></tr></table></figure></p>
+<p>…让一种字体标识为斜体(oblique)，如果没有这种格式，就使用italic字体。”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># 阻止右边框内的事件流</div></pre></td></tr></table></figure></p>
+<p>$(‘.feedback_box’).click(function (event) {<br>    var event = event || window.event;<br>    event.stopPropagation();<br>});<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># 对设置或移除被选元素的一个或多个类进行切换。</div></pre></td></tr></table></figure></p>
+<p>单个属性切换<br>$(“.more-info”).click(function (event) {<br>    event.preventDefault();<br>    $(this).toggleClass(“active”).siblings().removeClass(‘active’);<br>});</p>
+<p>$(“.supplice a”).click(function (event) {<br>    event.preventDefault();<br>    $(this).addClass(“active”).siblings().removeClass(‘active’);<br>});<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">覆盖chrome默认填充的黄</div></pre></td></tr></table></figure></p>
+<p>input:-webkit-autofill {<br>-webkit-text-fill-color: $gray-96;<br>@include box-shadow(0 0 0px 1000px $main-border-color inset);<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"> </div></pre></td></tr></table></figure></p>
+<p>媒体查询<br>max-device-width是设备整个显示区域的宽度，例如，真实的设备屏幕宽度。<br>@media (min-device-width: 321px) and (max-device-width: 375px) {</p>
+<p>}</p>
+<p>max-width是目标显示区域的宽度，例如，浏览器宽度。<br>@media screen and (min-width:600px) and (max-width:900px){</p>
+<p>}<br>```</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag"># 前端</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/20/常用命令备忘/" rel="next" title="常用命令备忘">
+                <i class="fa fa-chevron-left"></i> 常用命令备忘
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="xiaobei" />
+          <p class="site-author-name" itemprop="name">xiaobei</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#正则表达式"><span class="nav-number">1.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#H5微场景"><span class="nav-number">2.</span> <span class="nav-text">H5微场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HTML"><span class="nav-number">3.</span> <span class="nav-text">HTML</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#循环对象"><span class="nav-number">4.</span> <span class="nav-text">循环对象</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiaobei</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  <a target="_blank" href="https://github.com/xiaobei-wang/xiaobei-wang.github.io"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+</script>
+</body>
+</html>
