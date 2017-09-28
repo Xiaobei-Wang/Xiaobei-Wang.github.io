@@ -87,19 +87,19 @@
 
 
 
-<meta name="description" content="把远程的数据库导入到本地数据库12mysqldump -h &amp;apos;192.168.1.231&amp;apos; -uroot -p  --opt --compress 远程数据库名  --skip-lock-tables | MySQL -h localhost -uroot  本地数据库名;输入连接远程数据库的密码 xxxxxxx
-软连接（源目录 指向目录）1ln -s /usr/local/v">
+<meta name="description" content="Git 中 SSH key 生成步骤1$ ssh-keygen -t rsa -C &amp;quot;youremail@example.com&amp;quot;
+如何把本地的项目同新建的git关联起来12345678git initgit add .git commint -m “init”git remote add origin 你的github仓库地址git pushgit查看远程的地址$ git r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常用命令备忘">
 <meta property="og:url" content="http://yoursite.com/2017/06/20/常用命令备忘/index.html">
 <meta property="og:site_name" content="Xiao丶メ北er╮">
-<meta property="og:description" content="把远程的数据库导入到本地数据库12mysqldump -h &amp;apos;192.168.1.231&amp;apos; -uroot -p  --opt --compress 远程数据库名  --skip-lock-tables | MySQL -h localhost -uroot  本地数据库名;输入连接远程数据库的密码 xxxxxxx
-软连接（源目录 指向目录）1ln -s /usr/local/v">
-<meta property="og:updated_time" content="2017-09-04T06:36:23.000Z">
+<meta property="og:description" content="Git 中 SSH key 生成步骤1$ ssh-keygen -t rsa -C &amp;quot;youremail@example.com&amp;quot;
+如何把本地的项目同新建的git关联起来12345678git initgit add .git commint -m “init”git remote add origin 你的github仓库地址git pushgit查看远程的地址$ git r">
+<meta property="og:updated_time" content="2017-09-28T10:21:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用命令备忘">
-<meta name="twitter:description" content="把远程的数据库导入到本地数据库12mysqldump -h &amp;apos;192.168.1.231&amp;apos; -uroot -p  --opt --compress 远程数据库名  --skip-lock-tables | MySQL -h localhost -uroot  本地数据库名;输入连接远程数据库的密码 xxxxxxx
-软连接（源目录 指向目录）1ln -s /usr/local/v">
+<meta name="twitter:description" content="Git 中 SSH key 生成步骤1$ ssh-keygen -t rsa -C &amp;quot;youremail@example.com&amp;quot;
+如何把本地的项目同新建的git关联起来12345678git initgit add .git commint -m “init”git remote add origin 你的github仓库地址git pushgit查看远程的地址$ git r">
 
 
 
@@ -376,7 +376,9 @@
       
 
       
-        <h1 id="把远程的数据库导入到本地数据库"><a href="#把远程的数据库导入到本地数据库" class="headerlink" title="把远程的数据库导入到本地数据库"></a>把远程的数据库导入到本地数据库</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysqldump -h &apos;192.168.1.231&apos; -uroot -p  --opt --compress 远程数据库名  --skip-lock-tables | MySQL -h localhost -uroot  本地数据库名;</div><div class="line">输入连接远程数据库的密码 xxxxxxx</div></pre></td></tr></table></figure>
+        <h3 id="Git-中-SSH-key-生成步骤"><a href="#Git-中-SSH-key-生成步骤" class="headerlink" title="Git 中 SSH key 生成步骤"></a>Git 中 SSH key 生成步骤</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</div></pre></td></tr></table></figure>
+<h3 id="如何把本地的项目同新建的git关联起来"><a href="#如何把本地的项目同新建的git关联起来" class="headerlink" title="如何把本地的项目同新建的git关联起来"></a>如何把本地的项目同新建的git关联起来</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">git init</div><div class="line">git add .</div><div class="line">git commint -m “init”</div><div class="line">git remote add origin 你的github仓库地址</div><div class="line">git push</div><div class="line"></div><div class="line">git查看远程的地址</div><div class="line">$ git remote -v</div></pre></td></tr></table></figure>
+<h1 id="把远程的数据库导入到本地数据库"><a href="#把远程的数据库导入到本地数据库" class="headerlink" title="把远程的数据库导入到本地数据库"></a>把远程的数据库导入到本地数据库</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysqldump -h &apos;192.168.1.231&apos; -uroot -p  --opt --compress 远程数据库名  --skip-lock-tables | MySQL -h localhost -uroot  本地数据库名;</div><div class="line">输入连接远程数据库的密码 xxxxxxx</div></pre></td></tr></table></figure>
 <h1 id="软连接（源目录-指向目录）"><a href="#软连接（源目录-指向目录）" class="headerlink" title="软连接（源目录 指向目录）"></a>软连接（源目录 指向目录）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln -s /usr/local/var/www/PhpstormProjects/  ~/PhpstormProjects/</div></pre></td></tr></table></figure>
 <h1 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">- 命令简写</div><div class="line">$ git config --global alias.co checkout</div><div class="line">$ git config --global alias.ci commit</div><div class="line">$ git config --global alias.br branch</div><div class="line"></div><div class="line">- git命令</div><div class="line">git branch 查看分支</div><div class="line">git fetch origin dev:issues/#663  拉取最新dev，并创建分支</div><div class="line">git checkout issues/#663			 切换到这个分支上</div><div class="line"></div><div class="line">git status 查看修改的文件</div><div class="line"></div><div class="line">git add .</div><div class="line">git commit -m &quot;默认值修改 (#refs 132)&quot;</div><div class="line">git pull --rebase origin issues/#94 拉去远程分之</div><div class="line"></div><div class="line">- 冲突文件</div><div class="line">解决冲突both_modified</div><div class="line">git add .</div><div class="line">git rebase --contine</div><div class="line">git push -f origin issues/#159</div><div class="line"></div><div class="line">###解决冲突2</div><div class="line"></div><div class="line">切换到dev分支, 将远程的dev最新内容拉取下来</div><div class="line"></div><div class="line"></div><div class="line">git checkout dev</div><div class="line"></div><div class="line">git pull origin dev</div><div class="line"></div><div class="line">2. 将dev最新代码合并到特性分支</div><div class="line"></div><div class="line">git checkout issues/#ID</div><div class="line"></div><div class="line">git merge dev (这里合并时,就会终端,需要手动合并)</div><div class="line"></div><div class="line">both_modified就是冲突的文件</div><div class="line"></div><div class="line">3. 手动解决冲突,  解决一个文件,就添加一个(git add /path/to/file)</div><div class="line"></div><div class="line">所有冲突文件解决完后, 提交(可以用图形 或者命令行 git commit)</div><div class="line"></div><div class="line">4. 推送到远程</div><div class="line">git push origin issues/#ID</div><div class="line"></div><div class="line">###git后悔药</div><div class="line">git commit --amend</div><div class="line"></div><div class="line">### git修改提交的用户名和Email </div><div class="line"></div><div class="line">git config --global user.name &quot;xiao&quot;</div><div class="line"></div><div class="line">(4). 推送到远程</div><div class="line"></div><div class="line">git push origin issues/#ID</div><div class="line"></div><div class="line">###解决冲突2</div></pre></td></tr></table></figure>
 <h1 id="tig"><a href="#tig" class="headerlink" title="tig"></a>tig</h1><p>为啥使用tig</p>
@@ -536,7 +538,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -547,7 +549,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -558,7 +560,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -593,7 +595,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#把远程的数据库导入到本地数据库"><span class="nav-number">1.</span> <span class="nav-text">把远程的数据库导入到本地数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#软连接（源目录-指向目录）"><span class="nav-number">2.</span> <span class="nav-text">软连接（源目录 指向目录）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git命令"><span class="nav-number">3.</span> <span class="nav-text">git命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tig"><span class="nav-number">4.</span> <span class="nav-text">tig</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#brew"><span class="nav-number">5.</span> <span class="nav-text">brew</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql"><span class="nav-number">6.</span> <span class="nav-text">mysql</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hosts"><span class="nav-number">7.</span> <span class="nav-text">hosts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#源码编译安装"><span class="nav-number">8.</span> <span class="nav-text">源码编译安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#redis设置密码"><span class="nav-number">9.</span> <span class="nav-text">redis设置密码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-中-SSH-key-生成步骤"><span class="nav-number">1.</span> <span class="nav-text">Git 中 SSH key 生成步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何把本地的项目同新建的git关联起来"><span class="nav-number">2.</span> <span class="nav-text">如何把本地的项目同新建的git关联起来</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#把远程的数据库导入到本地数据库"><span class="nav-number"></span> <span class="nav-text">把远程的数据库导入到本地数据库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#软连接（源目录-指向目录）"><span class="nav-number"></span> <span class="nav-text">软连接（源目录 指向目录）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git命令"><span class="nav-number"></span> <span class="nav-text">git命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tig"><span class="nav-number"></span> <span class="nav-text">tig</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#brew"><span class="nav-number"></span> <span class="nav-text">brew</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql"><span class="nav-number"></span> <span class="nav-text">mysql</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hosts"><span class="nav-number"></span> <span class="nav-text">hosts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#源码编译安装"><span class="nav-number"></span> <span class="nav-text">源码编译安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#redis设置密码"><span class="nav-number"></span> <span class="nav-text">redis设置密码</span></a></div>
             
 
           </div>
