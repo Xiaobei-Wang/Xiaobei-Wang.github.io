@@ -3,7 +3,14 @@
   
     
     <entry>
-      <title><![CDATA[requirejs压缩工具r.js打包（一）]]></title>
+      <title><![CDATA[vue 引入jquery]]></title>
+      <url>%2F2017%2F10%2F11%2Fvue-%E5%BC%95%E5%85%A5jquery%2F</url>
+      <content type="text"><![CDATA[Vue如何引入Jquery1.首先在package.json里加入 123dependencies:&#123; &quot;jquery&quot; : &quot;^2.2.3&quot;&#125; 然后 nmp install 2.在webpack.base.conf.js里加入 1var webpack = require(&quot;webpack&quot;) 3.在module.exports的最后加入 1234567plugins: [ new webpack.optimize.CommonsChunkPlugin(&apos;common.js&apos;), new webpack.ProvidePlugin(&#123; jQuery: &quot;jquery&quot;, $: &quot;jquery&quot; &#125;)] 4.然后一定要重新 run dev 5.在main.js 引入就ok了 1import $ from &apos;jquery&apos;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[requirejs压缩工具r.js打包]]></title>
       <url>%2F2017%2F10%2F10%2Frequirejs%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7r-js%E6%89%93%E5%8C%85%2F</url>
       <content type="text"><![CDATA[单模块打包至于requirejs大家都是很熟悉的了，它的打包工具r.js是非常好用，也非常强大的，但是建于它的配置参数比较多，这里列出一份所有参数的中文详解，方便理解和记忆。 还有不明白的童鞋可以看看 require 项目地址项目地址 先看看目录结构1234567891011目录 ├── assets │ ├── css │ ├── images │ ├── font │ └── js │ └── common 公用插件包 │ └── index 模块包 │ └── lib 组件 ├── index.html ├── app.build.js 首页当然是先安装node jsnodejs 安装require js1npm install -g requirejs app.build.js1234567(&#123; appDir: &apos;./assets&apos;, // 需要打包的目录 baseUrl: &apos;./js&apos;, // js目录 dir: &apos;build&apos;, // 打包完的目录 mainConfigFile: &apos;./assets/js/lib/config.js&apos;, // require.js目录 name: &apos;index/index&apos; 需要打包的模块&#125;) 打包r.js命令1r.js -o app.build.js 多模块打包1234567891011121314(&#123; appDir: &apos;./assets&apos;, // 需要打包的目录 baseUrl: &apos;./js&apos;, // js目录 dir: &apos;build&apos;, // 打包完的目录 mainConfigFile: &apos;./assets/js/lib/config.js&apos;, // require.js目录 &quot;modules&quot;: [ &#123; name: index &#125;, &#123; name: a &#125; ]&#125;)]]></content>
     </entry>
