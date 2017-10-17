@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo," />
+  <meta name="keywords" content="PHP,Swoole," />
 
 
 
@@ -87,30 +87,19 @@
 
 
 
-<meta name="description" content="进入到主题文件目录1cd themes
-默认主题 landscape 目录结构:
-themes目录结构
-clone hexo-theme-next 并改名为 next1git clone https://github.com/iissnan/hexo-theme-next.git next
-当然你也可以clone 自己喜欢的Hexo主题Git地址,只需要将主题文件复制到themes这个文件内就可以">
+<meta name="description" content="Swoole是PHP的异步、并行、高性能网络通信引擎，使用纯C语言编写，提供了PHP语言的异步多线程服务器，异步TCP/UDP网络客户端，异步MySQL，异步Redis，数据库连接池，AsyncTask，消息队列，毫秒定时器，异步文件读写，异步DNS查询。 Swoole内置了Http/WebSocket服务器端/客户端、Http2.0服务器端。
+除了异步IO的支持之外，Swoole为PHP多进程的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo更换主题 (此篇以安装NexT为例)">
-<meta property="og:url" content="http://yoursite.com/2017/04/04/Hexo更换主题-此篇以安装NexT为例/index.html">
+<meta property="og:title" content="Swoole安装">
+<meta property="og:url" content="http://yoursite.com/2017/10/17/Swoole安装/index.html">
 <meta property="og:site_name" content="Xiao丶メ北er╮">
-<meta property="og:description" content="进入到主题文件目录1cd themes
-默认主题 landscape 目录结构:
-themes目录结构
-clone hexo-theme-next 并改名为 next1git clone https://github.com/iissnan/hexo-theme-next.git next
-当然你也可以clone 自己喜欢的Hexo主题Git地址,只需要将主题文件复制到themes这个文件内就可以">
-<meta property="og:image" content="http://onuyc1zo6.bkt.clouddn.com/landscape.png">
-<meta property="og:updated_time" content="2017-04-04T02:57:54.000Z">
+<meta property="og:description" content="Swoole是PHP的异步、并行、高性能网络通信引擎，使用纯C语言编写，提供了PHP语言的异步多线程服务器，异步TCP/UDP网络客户端，异步MySQL，异步Redis，数据库连接池，AsyncTask，消息队列，毫秒定时器，异步文件读写，异步DNS查询。 Swoole内置了Http/WebSocket服务器端/客户端、Http2.0服务器端。
+除了异步IO的支持之外，Swoole为PHP多进程的">
+<meta property="og:updated_time" content="2017-10-17T05:58:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo更换主题 (此篇以安装NexT为例)">
-<meta name="twitter:description" content="进入到主题文件目录1cd themes
-默认主题 landscape 目录结构:
-themes目录结构
-clone hexo-theme-next 并改名为 next1git clone https://github.com/iissnan/hexo-theme-next.git next
-当然你也可以clone 自己喜欢的Hexo主题Git地址,只需要将主题文件复制到themes这个文件内就可以">
-<meta name="twitter:image" content="http://onuyc1zo6.bkt.clouddn.com/landscape.png">
+<meta name="twitter:title" content="Swoole安装">
+<meta name="twitter:description" content="Swoole是PHP的异步、并行、高性能网络通信引擎，使用纯C语言编写，提供了PHP语言的异步多线程服务器，异步TCP/UDP网络客户端，异步MySQL，异步Redis，数据库连接池，AsyncTask，消息队列，毫秒定时器，异步文件读写，异步DNS查询。 Swoole内置了Http/WebSocket服务器端/客户端、Http2.0服务器端。
+除了异步IO的支持之外，Swoole为PHP多进程的">
 
 
 
@@ -138,13 +127,13 @@ clone hexo-theme-next 并改名为 next1git clone https://github.com/iissnan/hex
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/04/04/Hexo更换主题-此篇以安装NexT为例/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/17/Swoole安装/"/>
 
 
 
 
 
-  <title> Hexo更换主题 (此篇以安装NexT为例) | Xiao丶メ北er╮ </title>
+  <title> Swoole安装 | Xiao丶メ北er╮ </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -293,7 +282,7 @@ clone hexo-theme-next 并改名为 next1git clone https://github.com/iissnan/hex
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/04/Hexo更换主题-此篇以安装NexT为例/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/17/Swoole安装/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xiaobei">
@@ -314,7 +303,7 @@ clone hexo-theme-next 并改名为 next1git clone https://github.com/iissnan/hex
             
             
               
-                Hexo更换主题 (此篇以安装NexT为例)
+                Swoole安装
               
             
           </h1>
@@ -329,8 +318,8 @@ clone hexo-theme-next 并改名为 next1git clone https://github.com/iissnan/hex
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-04T10:01:18+08:00">
-                2017-04-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-17T13:45:49+08:00">
+                2017-10-17
               </time>
             
 
@@ -352,8 +341,8 @@ clone hexo-theme-next 并改名为 next1git clone https://github.com/iissnan/hex
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo教程/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo教程</span>
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
                   </a>
                 </span>
 
@@ -387,24 +376,21 @@ clone hexo-theme-next 并改名为 next1git clone https://github.com/iissnan/hex
       
 
       
-        <h3 id="进入到主题文件目录"><a href="#进入到主题文件目录" class="headerlink" title="进入到主题文件目录"></a>进入到主题文件目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd themes</div></pre></td></tr></table></figure>
-<p>默认主题 <strong>landscape</strong> 目录结构:</p>
-<p>themes目录结构<br><img src="http://onuyc1zo6.bkt.clouddn.com/landscape.png" alt="image"></p>
-<h3 id="clone-hexo-theme-next-并改名为-next"><a href="#clone-hexo-theme-next-并改名为-next" class="headerlink" title="clone hexo-theme-next 并改名为 next"></a>clone hexo-theme-next 并改名为 next</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/iissnan/hexo-theme-next.git next</div></pre></td></tr></table></figure>
-<p>当然你也可以clone 自己喜欢的Hexo主题Git地址,只需要将主题文件复制到<code>themes</code>这个文件内就可以了:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone theme_url.git</div></pre></td></tr></table></figure>
-<h3 id="打开Hexo根目录下的-config-yml-站点配置文件（tips-注意空格-）-将-theme-的-landscape-修改为刚才-clone-的-next"><a href="#打开Hexo根目录下的-config-yml-站点配置文件（tips-注意空格-）-将-theme-的-landscape-修改为刚才-clone-的-next" class="headerlink" title="打开Hexo根目录下的 _config.yml 站点配置文件（tips:注意空格!）,将 theme 的 landscape 修改为刚才 clone 的 next"></a>打开Hexo根目录下的 _config.yml 站点配置文件（tips:注意空格!）,将 <code>theme</code> 的 <code>landscape</code> 修改为刚才 <code>clone</code> 的 <code>next</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Extensions</div><div class="line">## Plugins: https://hexo.io/plugins/</div><div class="line">## Themes: https://hexo.io/themes/</div><div class="line">theme: next</div></pre></td></tr></table></figure>
-<p>同时设置一下站点的语言、时区，其他的配置可根据自己喜好更改：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">language: zh-Hans</div><div class="line">timezone: Asia/Urumqi</div></pre></td></tr></table></figure>
-<p>执行一下 <code>hexo clear</code> 清除缓存。</p>
-<h3 id="验证主题是否存在异常问题"><a href="#验证主题是否存在异常问题" class="headerlink" title="验证主题是否存在异常问题"></a>验证主题是否存在异常问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo s --debug</div></pre></td></tr></table></figure>
-<p>会提示如下信息，访问 <code>http://localhost:4000/</code>     :</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INFO Hexo is running at http://localhost:4000/. Press Ctrl+C to stop</div></pre></td></tr></table></figure>
-<h3 id="主题具体配置"><a href="#主题具体配置" class="headerlink" title="主题具体配置"></a>主题具体配置</h3><p>通过更改 <code>themes/next/_config.yml</code> 文件对next主题进行具体的配置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"># next主题可通过修改Scheme选项获得3中不同的外观，默认使用的是Muse：</div><div class="line">scheme: Mist</div><div class="line"># 添加个人头像：</div><div class="line">avatar: http://avatar.url</div><div class="line"># 菜单栏menu配置，根据自己喜好开启注释:</div><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  categories: /categories</div><div class="line">  about: /about</div><div class="line">  archives: /archives</div><div class="line">  tags: /tags</div><div class="line">  #sitemap: /sitemap.xml</div><div class="line">  commonweal: /404.html</div></pre></td></tr></table></figure>
-<p>玩法很多并集成了常用的第三方服务，可以参考<a href="http://theme-next.iissnan.com/getting-started.html#select-scheme" target="_blank" rel="external">Next主题官网</a></p>
-<p>Enjoy it !</p>
-<p><strong>备注：</strong>来自于 <a href="https://surprisepeas.github.io/2017/03/24/Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" target="_blank" rel="external">SurprisePeas - 个人技术博客</a> 的分享</p>
+        <p><a href="https://www.swoole.com/" target="_blank" rel="external">Swoole</a>是PHP的异步、并行、高性能网络通信引擎，使用纯C语言编写，提供了PHP语言的异步多线程服务器，异步TCP/UDP网络客户端，异步MySQL，异步Redis，数据库连接池，AsyncTask，消息队列，毫秒定时器，异步文件读写，异步DNS查询。 Swoole内置了Http/WebSocket服务器端/客户端、Http2.0服务器端。</p>
+<p>除了异步IO的支持之外，Swoole为PHP多进程的模式设计了多个并发数据结构和IPC通信机制，可以大大简化多进程并发编程的工作。其中包括了并发原子计数器，并发HashTable，Channel，Lock，进程间通信IPC等丰富的功能特性。</p>
+<p>Swoole2.0支持了类似Go语言的协程，可以使用完全同步的代码实现异步程序。PHP代码无需额外增加任何关键词，底层自动进行协程调度，实现异步。</p>
+<p>Swoole可以广泛应用于互联网、移动通信、企业软件、云计算、网络游戏、物联网（IOT）、车联网、智能家居等领域。 使用PHP+Swoole作为网络通信框架，可以使企业IT研发团队的效率大大提升，更加专注于开发创新产品。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>访问 <a href="https://github.com/swoole/swoole-src/releases" target="_blank" rel="external">Swoole Downloads</a>下载源码，解压。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ cd /path/to/swoole_source_code</div><div class="line">$ phpize</div><div class="line">$ ./configure</div><div class="line">$ make</div><div class="line">$ sudo make install</div></pre></td></tr></table></figure>
+<p>swoole的./configure有很多额外参数,可以通过./configure –help命令查看,这里均选择默认项</p>
+<p>安装成功后，需要修改php.ini文件，在php.ini文件中添加swoole配置，配置如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">extension=swoole.so</div></pre></td></tr></table></figure>
+<p>随后在终端中输入命令 php -m 查看扩展安装情况。如果在列出的扩展中看到了swoole, 则说明安装成功。</p>
+<h2 id="Hello-World通讯演示"><a href="#Hello-World通讯演示" class="headerlink" title="Hello World通讯演示"></a>Hello World通讯演示</h2><h3 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h3><p>创建一个 Server.php 文件并输入如下内容:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">// Server</div><div class="line">class Server</div><div class="line">&#123;</div><div class="line">    private $serv;</div><div class="line">    public function __construct() &#123;</div><div class="line">        $this-&gt;serv = new swoole_server(&quot;0.0.0.0&quot;, 9501);</div><div class="line">        $this-&gt;serv-&gt;set(array(</div><div class="line">            &apos;worker_num&apos; =&gt; 8,</div><div class="line">            &apos;daemonize&apos; =&gt; false,</div><div class="line">        ));</div><div class="line">        $this-&gt;serv-&gt;on(&apos;Start&apos;, array($this, &apos;onStart&apos;));</div><div class="line">        $this-&gt;serv-&gt;on(&apos;Connect&apos;, array($this, &apos;onConnect&apos;));</div><div class="line">        $this-&gt;serv-&gt;on(&apos;Receive&apos;, array($this, &apos;onReceive&apos;));</div><div class="line">        $this-&gt;serv-&gt;on(&apos;Close&apos;, array($this, &apos;onClose&apos;));</div><div class="line">        $this-&gt;serv-&gt;start();</div><div class="line">    &#125;</div><div class="line">    public function onStart( $serv ) &#123;</div><div class="line">        echo &quot;Start\n&quot;;</div><div class="line">    &#125;</div><div class="line">    public function onConnect( $serv, $fd, $from_id ) &#123;</div><div class="line">        $serv-&gt;send( $fd, &quot;Hello &#123;$fd&#125;!&quot; );</div><div class="line">    &#125;</div><div class="line">    public function onReceive( swoole_server $serv, $fd, $from_id, $data ) &#123;</div><div class="line">        echo &quot;Get Message From Client &#123;$fd&#125;:&#123;$data&#125;\n&quot;;</div><div class="line">        $serv-&gt;send($fd, $data);</div><div class="line">    &#125;</div><div class="line">    public function onClose( $serv, $fd, $from_id ) &#123;</div><div class="line">        echo &quot;Client &#123;$fd&#125; close connection\n&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">// 启动服务器</div><div class="line">$server = new Server();</div></pre></td></tr></table></figure>
+<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><p>创建一个 Client.php 文件并输入如下内容:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">class Client</div><div class="line">&#123;</div><div class="line">    private $client;</div><div class="line">    public function __construct() &#123;</div><div class="line">        $this-&gt;client = new swoole_client(SWOOLE_SOCK_TCP);</div><div class="line">    &#125;</div><div class="line">    public function connect() &#123;</div><div class="line">        if( !$this-&gt;client-&gt;connect(&quot;127.0.0.1&quot;, 9501 , 1) ) &#123;</div><div class="line">            echo &quot;Error: &#123;$this-&gt;client-&gt;errMsg&#125;[&#123;$this-&gt;client-&gt;errCode&#125;]\n&quot;;</div><div class="line">        &#125;</div><div class="line">        fwrite(STDOUT, &quot;请输入消息:&quot;); $msg = trim(fgets(STDIN)); $this-&gt;client-&gt;send( $msg );</div><div class="line">        $message = $this-&gt;client-&gt;recv();</div><div class="line">        echo &quot;Get Message From Server:&#123;$message&#125;\n&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">$client = new Client();</div><div class="line">$client-&gt;connect();</div></pre></td></tr></table></figure>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>在Terminal下执行命令 php Server.php 即可启动服务器,在另一个Terminal下执行 php<br>Client.php ,输入要发送的内容,即可发送消息到服务器,并收到来自服务器的消息。</p>
 
       
     </div>
@@ -434,7 +420,9 @@ clone hexo-theme-next 并改名为 next1git clone https://github.com/iissnan/hex
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+            <a href="/tags/Swoole/" rel="tag"># Swoole</a>
           
         </div>
       
@@ -447,8 +435,8 @@ clone hexo-theme-next 并改名为 next1git clone https://github.com/iissnan/hex
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/04/Github-Hexo-Markdown写博客/" rel="next" title="Github+Hexo+Markdown写博客">
-                <i class="fa fa-chevron-left"></i> Github+Hexo+Markdown写博客
+              <a href="/2017/10/11/vue-引入jquery/" rel="next" title="vue 引入jquery">
+                <i class="fa fa-chevron-left"></i> vue 引入jquery
               </a>
             
           </div>
@@ -456,10 +444,6 @@ clone hexo-theme-next 并改名为 next1git clone https://github.com/iissnan/hex
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/04/15/jquery开发自定义的插件总结/" rel="prev" title="jquery开发自定义的插件总结">
-                jquery开发自定义的插件总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -588,7 +572,7 @@ clone hexo-theme-next 并改名为 next1git clone https://github.com/iissnan/hex
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#进入到主题文件目录"><span class="nav-number">1.</span> <span class="nav-text">进入到主题文件目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#clone-hexo-theme-next-并改名为-next"><span class="nav-number">2.</span> <span class="nav-text">clone hexo-theme-next 并改名为 next</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打开Hexo根目录下的-config-yml-站点配置文件（tips-注意空格-）-将-theme-的-landscape-修改为刚才-clone-的-next"><span class="nav-number">3.</span> <span class="nav-text">打开Hexo根目录下的 _config.yml 站点配置文件（tips:注意空格!）,将 theme 的 landscape 修改为刚才 clone 的 next</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证主题是否存在异常问题"><span class="nav-number">4.</span> <span class="nav-text">验证主题是否存在异常问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题具体配置"><span class="nav-number">5.</span> <span class="nav-text">主题具体配置</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-World通讯演示"><span class="nav-number"></span> <span class="nav-text">Hello World通讯演示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端"><span class="nav-number">1.</span> <span class="nav-text">服务端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端"><span class="nav-number">2.</span> <span class="nav-text">客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行"><span class="nav-number">3.</span> <span class="nav-text">运行</span></a></li></ol></div>
             
 
           </div>
